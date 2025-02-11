@@ -1,0 +1,48 @@
+:root{
+    --secondary : #143D60;
+    --three : #23486A;
+    --four : #16404D;
+    --five: #2E5077;
+    --seven: #2A3663;
+    --prime : #FCC737;
+    --since: #3E5879;
+    --greenfad: #356c7e;
+
+}
+
+h4.text-title{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--greenfad);
+}
+.content-addproduct{
+    max-width: 700px;
+}
+.form-group input{
+    padding: 10px;
+}
+.form-group label{
+    padding: 5px 0;
+    opacity: .7;
+}
+
+.btn-primary{
+    background: var(--greenfad);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    /* border-radius: 5px;  */
+}
+.btn-primary:hover{
+    background: white;
+    border: 1px solid;
+    color: black;
+}
+
+/* Media */
+
+@media (max-width: 768px){
+    .addproduct{
+        margin: 20px;
+    }
+}

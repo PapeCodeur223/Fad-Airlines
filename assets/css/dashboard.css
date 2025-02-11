@@ -1,0 +1,58 @@
+:root{
+    --secondary : #143D60;
+    --three : #23486A;
+    --four : #16404D;
+    --five: #2E5077;
+    --seven: #2A3663;
+    --prime : #FCC737;
+    --since: #3E5879;
+    --greenfad: #356c7e;
+
+}
+
+.navbar-brand{
+    color: var(--greenfad) !important;
+}
+
+.nav-link{
+    color: var(--secondary);
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    color: var(--black) !important;
+}
+
+a.nav-link:hover{
+    padding: 6px 30px;
+    border-radius: 60px;
+    color: white !important;
+    background-color: var(--greenfad);
+}
+a.nav-link.active{
+    color: var(--greenfad) !important;
+    font-weight: 700;
+}
+
+.greenfad{
+    color: var(--greenfad);
+    font-weight: 700;
+}
+
+.btn.btn-primary{
+    background: var(--greenfad) !important;
+}
+
+.btn.btn-primary:hover{
+    background: white;
+    border: 1px solid;
+    color: white;
+}
+
+h5.green-title{
+    text-align: right;
+}
+
+@media screen and (max-width:768px){
+    .container{
+        overflow: hidden;
+    }
+}

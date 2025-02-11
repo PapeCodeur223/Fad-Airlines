@@ -1,0 +1,233 @@
+:root{
+    --secondary : #143D60;
+    --three : #23486A;
+    --four : #16404D;
+    --five: #2E5077;
+    --seven: #2A3663;
+    --prime : #FCC737;
+    --since: #3E5879;
+    --greenfad: #356c7e;
+
+}
+
+.container{
+    color: #000;
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/pexels-pixabay-358319.jpg') center/cover no-repeat;
+
+    padding: 60px 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+    color: black;
+}
+.card-img-top{
+    height: 140px;
+}
+
+.custom-card:hover{
+    cursor: pointer;
+    background: linear-gradient(top top, transparent, white, white);
+    opacity: .8;
+}
+
+a.btn-primary{
+    background: var(--greenfad);
+    padding: 10px;
+}
+
+a.btn-primary:hover{
+    color: black;
+    background: white !important;
+    border: 1px solid black;
+}
+.custom-card{
+    background: url("../images/city/ville11.jpeg") center/cover no-repeat;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 400px !important;
+    display: flex;
+    justify-content: flex-end;
+}
+.custom-2{
+    background: url("../images/city/ville7.jpeg") center/cover no-repeat;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 400px !important;
+    display: flex;
+    justify-content: flex-end;
+}
+.custom-3{
+    background: url("../images/city/ville10.jpeg") center/cover no-repeat;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 400px !important;
+    display: flex;
+    justify-content: flex-end;
+}
+.custom-4{
+    background: url("../images/city/backiya.jpeg") center/cover no-repeat;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 400px !important;
+    display: flex;
+    justify-content: flex-end;
+}
+.custom-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+}
+.card-content{
+    position: relative;
+    z-index: 1;
+}
+.flyer{
+    margin: 0 75px;
+}
+
+div.col-sm-3.mb-3{
+    padding: 10px;
+}
+
+.main-header{
+    background: white;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+    padding: 20px;
+}
+.content-parent{
+   display: flex;
+   align-items: center;
+}
+.content h5{
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+.content h5{
+    color: var(--greenfad);
+}
+.content p, .btn-hadj a{
+    font-size: 1.3rem;
+}
+.btn-outline-dark:hover{
+    background: var(--greenfad) !important;
+}
+
+.card-item{
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+}
+.btn-primary{
+    background: var(--greenfad) !important;
+    width: 100%;
+}
+
+.carousel-title{
+    color: var(--greenfad);
+    font-weight: bold;
+}
+.divider{
+    width: 50%;
+}
+.fa-star{
+    color: var(--greenfad);
+}
+
+.green_fad{
+    color: var(--greenfad);
+}
+
+
+/* FORMULAIRE */
+label{
+    padding: 3px 0;
+    font-style: italic;
+    opacity: .3;
+}
+.form-group{
+    padding: 5px 0;
+}
+.form-group input{
+    padding: 10px;
+    border: none;
+}
+
+.form-group input:focus{
+    outline: none;
+    border: 1px solid var(--greenfad);
+}
+
+.fad-container{
+    background: var(--greenfad);
+    padding: 40px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 767px){
+    .col-sm-6{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .col-sm-6 img{
+        height: auto !important;
+    }
+    .content-parent > .content{
+        padding: 20px;
+    }
+    #carouselExampleAutoplaying{
+        padding: 0 !important;
+    }
+    .flyer{
+        margin: 0 !important;
+    }
+    .fad-card-green{
+        margin: 0;
+    }
+
+    .green_contact{
+        margin-right: 0 !important;
+    }
+    .formulaire{
+        background: white;
+        padding: 30px;
+    }
+    .form-group input, .form-group textarea{
+        border: 1px solid cadetblue;
+        opacity: .7;
+    }
+    .is_logger{
+        padding: 15px;
+    }
+    .card-fad > img{
+        width: 300px;
+    }
+
+    .fad_card{
+        display: none;
+    }
+
+
+}

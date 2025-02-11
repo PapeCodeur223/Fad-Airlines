@@ -1,0 +1,48 @@
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/billet.jpg') center/cover no-repeat;
+
+    padding: 60px 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+    color: black;
+}
+
+img.card-img-top{
+    height: 200px;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-add {
+    transition: background-color 0.3s, transform 0.2s;
+}
+.btn-add:active {
+    transform: scale(0.95);
+}
+
+/* Card */
+h5.card-title{
+    color: var(--greenfad);
+    font-weight: 700;
+}
+
+button.btn.btn-primary{
+    background: var(--greenfad);
+    color: white;
+}
+
+button.btn.btn-primary:hover{
+    color: black;
+    background: white;
+    border: 1px solid;
+}

@@ -1,0 +1,65 @@
+:root{
+    --secondary : #143D60;
+    --three : #23486A;
+    --four : #16404D;
+    --five: #2E5077;
+    --seven: #2A3663;
+    --prime : #FCC737;
+    --since: #3E5879;
+    --greenfad: #356c7e;
+
+}
+
+.nav-link{
+    color: var(--secondary);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+a.nav-link:hover{
+    padding: 6px 30px;
+    border-radius: 60px;
+    color: white !important;
+    background-color: var(--greenfad);
+}
+a.nav-link.active{
+    color: var(--greenfad) !important;
+    font-weight: 700;
+}
+
+.greenfad{
+    color: var(--greenfad);
+    font-weight: 700;
+}
+
+.btn.btn-primary, .btn-success{
+    background: var(--greenfad) !important;
+    padding: 7px;
+
+}
+
+.btn.btn-success:hover{
+    background: white !important;
+    color: black;
+    border: 1px solid;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group label{
+    opacity: .5;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.form-group input{
+    padding: 8px;
+}
+
+.form-group textarea{
+    border: 1px solid var(--greenfad);
+}

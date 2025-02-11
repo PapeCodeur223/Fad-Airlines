@@ -1,0 +1,103 @@
+:root{
+    --secondary : #143D60;
+    --three : #23486A;
+    --four : #16404D;
+    --five: #2E5077;
+    --seven: #2A3663;
+    --prime : #FCC737;
+    --since: #3E5879;
+    --greenfad: #356c7e;
+
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/Voyage_en_avion.jpeg') center/cover no-repeat;
+
+    padding: 60px 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+    color: black;
+}
+
+div.greenfad > h2{
+    color: var(--greenfad);
+}
+.btn-primary{
+    background: var(--greenfad);
+    padding: 10px;
+}
+
+.btn-primary:hover{
+    color: black;
+    background: white;
+    border: 1px solid black;
+}
+
+.card-text > i.fa-solid.fa-circle-check{
+    color: var(--greenfad);
+}
+
+.card-title > .icons{
+    padding: 7px;
+    border-radius: 50px;
+    background: var(--greenfad);
+    color: white;
+}
+
+.fad-card{
+    min-height: 500px;
+}
+
+.green_fad{
+    color: var(--greenfad);
+    font-weight: 700;
+}
+
+.contact{
+    background: white;
+}
+
+.green_contact{
+    margin-right: 10px;
+}
+
+address{
+    background-color: var(--greenfad);
+}
+
+/* FORMULAIRE */
+label{
+    padding: 3px 0;
+    font-style: italic;
+    opacity: .3;
+}
+.form-group{
+    padding: 5px 0;
+}
+.form-group input{
+    padding: 10px;
+    border: none;
+}
+
+.form-group input:focus{
+    outline: none;
+    border: 1px solid var(--greenfad);
+}
+
+/* Media */
+
+@media (max-width: 768px) {
+    .green_contact{
+        margin-right: 0 !important;
+    }
+    .formulaire{
+        background: white;
+        padding: 30px;
+    }
+    .form-group input, .form-group textarea{
+        border: 1px solid cadetblue;
+        opacity: .7;
+    }
+}

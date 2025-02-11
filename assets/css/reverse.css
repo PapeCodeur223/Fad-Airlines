@@ -1,0 +1,11 @@
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/burj.jpg') center/cover no-repeat;
+
+    padding: 60px 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+    color: black;
+}

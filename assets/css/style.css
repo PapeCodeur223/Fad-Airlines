@@ -1,0 +1,106 @@
+button.clicked {
+    animation: clickAnimation 0.5s ease-in-out;
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Les styles de basess */
+
+:root{
+    --secondary : #143D60;
+    --three : #23486A;
+    --four : #16404D;
+    --five: #2E5077;
+    --seven: #2A3663;
+    --prime : #FCC737;
+    --since: #3E5879;
+    --black: #000;
+    --greenfad: #356c7e;
+}
+
+header {
+    display: block;
+    padding: 1rem;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+}
+
+
+.navbar-brand{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--greenfad);
+}
+
+.nav-link{
+    color: var(--secondary);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+a.nav-link:hover{
+    padding: 6px 30px;
+    border-radius: 60px;
+    color: white !important;
+    background-color: var(--greenfad);
+}
+a.nav-link.active{
+    color: var(--greenfad) !important;
+    font-weight: 700;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f1;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+main {
+    padding: 20px;
+}
+
+.products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.carousel-control-prev, .carousel-control-next{
+    color: #4B164C !important;
+}

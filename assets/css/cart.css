@@ -1,0 +1,42 @@
+:root{
+    --secondary : #143D60;
+    --three : #23486A;
+    --four : #16404D;
+    --five: #2E5077;
+    --seven: #2A3663;
+    --prime : #FCC737;
+    --since: #3E5879;
+    --greenfad: #356c7e;
+
+}
+h5{
+    font-weight: 800;
+}
+
+h5, p.prix, .greenfad{
+    color: var(--greenfad);
+}
+
+p.prix{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+p.prix{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.btn-primary{
+    color: white;
+    background: var(--greenfad);
+}
+.btn-primary:hover{
+    color: black;
+    background: white;
+    border: 1px solid;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+}
