@@ -5,12 +5,14 @@ link_css("./assets/css/checkout.css");
 
 // Vérifier si le panier est vide
 if (empty($_SESSION['panier'])) {
-    header('Location: panier.php'); // Rediriger vers la page panier si vide
+    header('Location: index.php?page=cart'); // Rediriger vers la page panier si vide
     exit;
 }
 
 $panier = $_SESSION['panier'];
 $total = 0;
+
+var_dump($_SESSION['panier']);
 
 // Calcul du total
 foreach ($panier as $item) {
