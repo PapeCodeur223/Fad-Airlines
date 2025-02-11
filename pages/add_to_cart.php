@@ -1,48 +1,48 @@
 <?php
-// On commence la session pour gérer les informations du panier
-// session_start();
 
-// Assurez-vous que la connexion à la base de données est incluse ici, par exemple
-// include('config.php');
+session_start();
+ob_start(); // Empêcher toute sortie indésirable
 
-// Vérifier si les données sont présentes
-if (isset($_POST['id'], $_POST['name'], $_POST['price'])) {
-    $id = $_POST['id'];
-    $name = $_POST['name'];
-    $price = $_POST['price'];
+header('Content-Type: application/json'); // Indiquer que la réponse sera en JSON
 
-    // Vérifier si la session panier existe, sinon l'initialiser
-    if (!isset($_SESSION['panier'])) {
+// Activer l'affichage des erreurs pour débogage (désactive-le en production)
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
+    $billet_id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT); // Sécuriser l'ID
+
+    if (!$billet_id) {
+        ob_end_clean();
+        echo json_encode(["status" => "error", "message" => "ID de billet invalide"]);
+        exit;
+    }
+
+    // Vérifier si $_SESSION['panier'] est bien un tableau
+    if (!isset($_SESSION['panier']) || !is_array($_SESSION['panier'])) {
         $_SESSION['panier'] = [];
     }
 
-    // Ajouter l'article au panier
-    if (isset($_SESSION['panier'][$id])) {
-        // Si l'article existe déjà, augmenter la quantité
-        $_SESSION['panier'][$id]['quantity']++;
+    // Ajouter ou mettre à jour la quantité du billet
+    if (isset($_SESSION['panier'][$billet_id])) {
+        $_SESSION['panier'][$billet_id]['quantity'] += 1;
     } else {
-        // Sinon, ajouter l'article avec une quantité de 1
-        $_SESSION['panier'][$id] = [
-            'name' => $name,
-            'price' => $price,
-            'quantity' => 1
-        ];
+        $_SESSION['panier'][$billet_id] = ['quantity' => 1];
     }
 
-    // Répondre en JSON pour la réussite
+    // Nettoyer la sortie avant d'envoyer JSON
+    ob_end_clean();
+
+    // Retourner une réponse JSON correcte
     echo json_encode([
-        'status' => 'success',
-        'message' => 'Billet ajouté au panier avec succès.'
+        "status" => "success",
+        "message" => "Billet ajouté au panier",
+        "redirect" => "index.php?page=cart"
     ]);
-} else {
-    // Si les données ne sont pas présentes
-    echo json_encode([
-        'status' => 'error',
-        'message' => 'Billet ou quantité manquante'
-    ]);
+    exit;
 }
-?>
 
-
-
-</script>
+// Nettoyer et renvoyer une erreur JSON si la requête est invalide
+ob_end_clean();
+echo json_encode(["status" => "error", "message" => "Requête invalide"]);
+exit;

@@ -88,38 +88,32 @@ $billets = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </section>
 
+
+<!-- Pour la redirection vers la page add_to_cart.php -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-    $(".btn-add-cart").on("click", function() {
-        let id = $(this).data("id");
-        let name = $(this).data("name");
-        let price = $(this).data("price");
+$(".btn-add-cart").on("click", function() {
+    let id = $(this).data("id");
 
-        console.log("Bouton cliqué 🚀 ID:", id, "Nom:", name, "Prix:", price); // Vérification
-
-        if (id && name && price) {
-            $.ajax({
-                url: "index.php?page=add_to_cart",  // ou index.php?page=add_to_cart selon votre architecture
-                type: "POST",
-                data: { id: id, name: name, price: price },
-                success: function(response) {
-                    console.log("Réponse AJAX ✅ :", response);
-                    let data = JSON.parse(response);
-                    if (data.status === "success") {
-                        alert("✅ Article ajouté au panier !");
-                        window.location.href = "index.php?page=cart"; 
-                    } else {
-                        alert("❌ Erreur : " + data.message);
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.log("❌ Erreur AJAX :", xhr.responseText, status, error);
-                    alert("❌ Erreur AJAX ! Vérifie la console (F12).");
-                }
-            });
-        } else {
-            alert("❌ Billet ou quantité manquante.");
+    $.ajax({
+        url: "pages/add_to_cart.php",
+        type: "POST",
+        data: { id: id },
+        dataType: "json", // IMPORTANT : on attend du JSON
+        success: function(data) {
+            if (data.status === "success") {
+                alert("✅ Billet ajouté au panier !");
+                window.location.href = data.redirect; // Redirection
+            } else {
+                alert("❌ Erreur : " + data.message);
+            }
+        },
+        error: function(xhr, status, error) {
+            console.log("❌ Erreur AJAX :", xhr.responseText, status, error);
+            alert("❌ Une erreur s'est produite ! Vérifiez la console.");
         }
     });
+});
+
 </script>
