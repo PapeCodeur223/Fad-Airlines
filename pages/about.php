@@ -79,10 +79,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p class="lead">Nous sommes une entreprise de transportation et de voyage qui vise à proposer des services de voyageurs en plein air à des tarifs abordables et attractifs.</p>
                 <p class="lead">Nous sommes passionnés par la création d'impact durable pour votre entreprise à travers des solutions numériques et marketing innovantes.</p>
                 <p class="lead">Chez GreenFad, nous croyons en l’innovation continue et en l’excellence dans tout ce que nous entreprenons. Nous nous efforçons de devenir le partenaire privilégié de nos clients en leur fournissant non seulement des solutions créatives, mais aussi une valeur durable à long terme.</p>
-                <a href="#" class="btn btn-primary w-100">En savoir plus</a>
+                <a href="#" class="btn btn-primary w-100 product-card">En savoir plus</a>
     
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 product-card">
                 <img src="assets/images/fad/fad-card.webp" alt="About" class="img-fluid">
             </div>
         </div>
@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <p class="card-text"><i class="fa-solid fa-circle-check"></i> Site Web adaptatif</p>
                         <p class="card-text"><i class="fa-solid fa-circle-check"></i> E-commerce Development</p>
 
-                        <a href="#" class="btn btn-primary w-100">En savoir plus</a>
+                        <a href="#" class="btn btn-primary w-100 product-card">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <p class="card-text"><i class="fa-solid fa-circle-check"></i> Intégration avec les systèmes existants</p>
                         <p class="card-text"><i class="fa-solid fa-circle-check"></i> Construit avec les dernières technologies</p>
 
-                        <a href="#" class="btn btn-primary w-100">En savoir plus</a>
+                        <a href="#" class="btn btn-primary w-100 product-card">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <p class="card-text"><i class="fa-solid fa-circle-check"></i> Améliorer le classement des moteurs de recherche</p>
                         <p class="card-text"><i class="fa-solid fa-circle-check"></i> Améliorer l'expérience utilisateur</p>
 
-                        <a href="#" class="btn btn-primary w-100">En savoir plus</a>
+                        <a href="#" class="btn btn-primary w-100 product-card">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -200,20 +200,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 p-0 text-center">
+            <div class="col-sm-4 p-0 text-center product-card">
                 <address class="adress p-4 green_contact text-white">
                     <strong>Adresse</strong><br>
                     Magnabougou/Faso Kanu, r37,porte 481BPE3910<br>
                 </address>
             </div>
-            <div class="col-sm-4 p-0 text-center">
+            <div class="col-sm-4 p-0 text-center product-card">
                 <address class="adress bg-white p-4 green_contact">
                     <strong>Téléphone</strong><br>
                     <abbr title="Phone">Tel</abbr> +223 7219 465 54 / +223 901 760 30
                     <br> +223 74 66 64 89
                 </address>
             </div>
-            <div class="col-sm-4 p-0 text-center">
+            <div class="col-sm-4 p-0 text-center product-card">
                 <address class="adress p-4 text-white">
                     <strong>Email</strong><br>
                     <abbr title="Email">Email:</abbr> contact@greenfad.tech / services@greenfad.tech
@@ -236,28 +236,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             </div>
             <div class="col-sm-6">
-                <form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
-                    <div class="form-group">
+                <form method="POST" action="">
+                    <div class="form-group product-card">
                         <label for="name">Nom *</label>
                         <input type="text" class="form-control" name="name" id="name">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group product-card">
                         <label for="email">Email *</label>
                         <input type="email" class="form-control" name="email" id="email" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group product-card">
                         <label for="phone">Téléphone</label>
                         <input type="tel" class="form-control" name="phone_number" id="phone">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group product-card">
                         <label for="phone">Sujet</label>
                         <input type="text" class="form-control" name="sujet" id="phone">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group product-card">
                         <label for="phone">Commentaire</label>
                         <textarea name="comment" id="comment" rows="3" class="form-control"></textarea>
                     </div>
-                    <bouton class="btn btn-primary my-2 w-100">Envoyer</bouton>
+                    <bouton class="btn btn-primary my-2 w-100 product-card">Envoyer</bouton>
                 </form>
 
             </div>

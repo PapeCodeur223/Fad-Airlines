@@ -291,10 +291,10 @@
                 <h2 class="display-4 fw-bold green_fad">Découvrez la Fad Card de GreenFad</h2>
                 <p class="lead">Chez GreenFad,nous nous engageons à développer des solutions innovantes qui simplifient et améliorent la vie professionnelle de nos clients, qu’il s’agisse de petites entreprises, de grandes entreprises ou de particuliers.</p>
                 <p class="lead">Que vous soyez consultant indépendant, entrepreneur ou professionnel indépendant,  La Fad Card incarne notre engagement à intégrer la technologie de manière pratique et accessible. </p>
-                <a href="https://greenfad.tech/decouvrez-la-fad-card-par-greenfad-revolutionnez-votre-facon-de-reseauter/" target="_blank" class="btn btn-primary w-100">En savoir plus</a>
+                <a href="https://greenfad.tech/decouvrez-la-fad-card-par-greenfad-revolutionnez-votre-facon-de-reseauter/" target="_blank" class="btn btn-primary w-100 product-card">En savoir plus</a>
     
             </div>
-            <div class="col-sm-6 my-3 bg-white">
+            <div class="col-sm-6 my-3 bg-white product-card">
                 <img src="assets/images/fad/card.webp" alt="About" class="img-fluid">
             </div>
         </div>
@@ -527,7 +527,7 @@
 <section class="flyer px-4 px-lg-6 my-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-sm-3 mb-3">
-            <div class="card h-100 card-one custom-card">
+            <div class="card h-100 card-one custom-card product-card">
                 <!-- <img src="assets/images/city/ville11.jpeg" alt="Ville"> -->
                 <div class="card-content">
                     <h4 class="card-title">Amsterdam</h4>
@@ -538,7 +538,7 @@
         </div>
 
         <div class="col-sm-3 mb-3">
-            <div class="card h-100 card-one custom-card custom-2">
+            <div class="card h-100 card-one custom-card custom-2 product-card">
                 <!-- <img src="assets/images/city/ville11.jpeg" alt="Ville"> -->
                 <div class="card-content">
                     <h4 class="card-title">Paris</h4>
@@ -549,7 +549,7 @@
         </div>
 
         <div class="col-sm-3 mb-3">
-            <div class="card h-100 card-one custom-card custom-3">
+            <div class="card h-100 card-one custom-card custom-3 product-card">
                 <!-- <img src="assets/images/city/ville11.jpeg" alt="Ville"> -->
                 <div class="card-content">
                     <h4 class="card-title">Los Angeles</h4>
@@ -560,7 +560,7 @@
         </div>
 
         <div class="col-sm-3 mb-3">
-            <div class="card h-100 card-one custom-card custom-4">
+            <div class="card h-100 card-one custom-card custom-4 product-card">
                 <!-- <img src="assets/images/city/ville11.jpeg" alt="Ville"> -->
                 <div class="card-content">
                     <h4 class="card-title">Backiyah</h4>
@@ -589,7 +589,7 @@
             
             <!-- Demander à l'utilisateur qu'il doit se connecter pour poster un commentaire -->
             <?php if(!isset($_SESSION['user_id'])): ?>
-                <div class="alert alert-warning">Vous devez vous connecter pour ajouter des suggestions</div>
+                <div class="alert alert-warning logger_user">Vous devez vous connecter pour ajouter des suggestions</div>
             <?php else: ?>
                 <div class="col-sm-6 is_logger" id="logger_user">
                     <form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
@@ -613,7 +613,7 @@
                             <label for="phone">Commentaire</label>
                             <textarea name="comment" id="comment" rows="3" class="form-control"></textarea>
                         </div>
-                        <bouton class="btn btn-primary my-2 py-2 fs-5 w-100">Envoyer</bouton>
+                        <bouton class="btn btn-primary my-2 py-2 fs-5 w-100 product-card">Envoyer</bouton>
                     </form>
 
                 </div>
@@ -628,10 +628,10 @@
 <section id="fad_card">
     <div class="container px-4 px-lg-5 fad_card">
         <div class="row gx-4 gx-lg-5 d-flex justify-content-center align-items-center fad-card-green bg-white fad-container">
-            <div class="col-sm-6 card-fad my-2">
+            <div class="col-sm-6 card-fad my-2 product-card">
                 <img src="assets/images/fad/card-red.jpeg" alt="" srcset="">
             </div>
-            <div class="col-sm-6 my-2 card-fad">
+            <div class="col-sm-6 my-2 card-fad product-card">
                 <img src="assets/images/fad/card-yellow.jpeg" alt="About" class="img-fluid">
             </div>
         </div>
