@@ -1,21 +1,4 @@
-
-<?php 
-    link_css("./assets/css/style.css");
-    // link_css("./assets/css/erreur.css");
-
-?>
-
-<div class="container">
-    <div class="content">
-        <img src="assets/images/not_found.jpeg" alt="not_found404" class="img-fluid">
-        <h2 class='greenfad'>Erreur 404 : Page introuvable</h2>
-        <p class="mb-0">Désolé, la page demandée n'existe pas.</p>
-        <p class="my-0">Pour aller à la page <a href="index.php?page=home" class="lien-home">Home du site</a></p>
-    </div>
-</div>*
-
-<style>
-    :root{
+:root{
     --secondary : #143D60;
     --three : #23486A;
     --four : #16404D;
@@ -55,7 +38,6 @@ a.lien-home:hover{
     color: black;
 }
 
-img.img-fluid{
-    width: 600px;
+.container{
+    background-color: red;
 }
-</style>

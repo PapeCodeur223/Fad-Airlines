@@ -37,12 +37,15 @@
 a.btn-primary{
     background: var(--greenfad);
     padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 a.btn-primary:hover{
     color: black;
     background: white !important;
     border: 1px solid black;
+    transform: scale(1.05) !important;
 }
 .custom-card{
     background: url("../images/city/ville11.jpeg") center/cover no-repeat;

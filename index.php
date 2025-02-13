@@ -36,7 +36,7 @@ $titles = [
     'erreur' => 'Page 404',
 
 ];
-$title = $titles[$page] ?? 'Boutique en ligne';
+$title = $titles[$page] ?? 'Page 404';
 
 // Import des fichiers neccessaires pour la connexion :
 require 'includes/functions.php';

@@ -34,6 +34,11 @@ header {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
 }
 
+ul.navbar-nav{
+    justify-content: center;
+    width: 100%;
+}
+
 
 .navbar-brand{
     font-size: 22px;
@@ -42,10 +47,11 @@ header {
 }
 
 .nav-link{
-    color: var(--secondary);
     font-size: 17px;
     font-weight: 500;
     color: var(--black);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 a.nav-link:hover{
@@ -53,12 +59,9 @@ a.nav-link:hover{
     border-radius: 60px;
     color: white !important;
     background-color: var(--greenfad);
+    transform: scale(1.05) !important;
+    font-weight: 700 !important;
 }
-a.nav-link.active{
-    color: var(--greenfad) !important;
-    font-weight: 700;
-}
-
 
 body {
     font-family: Arial, sans-serif;
@@ -71,7 +74,19 @@ header nav a {
     text-decoration: none;
 }
 
+a.btn-primary{
+    background: var(--greenfad);
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+a.btn-primary:hover{
+    color: black;
+    background: white !important;
+    border: 1px solid black;
+    transform: scale(1.05);
+}
 
 
 
